@@ -84,6 +84,9 @@ label {
     margin-bottom: 0;
 }
 
+.button-class {
+    cursor: pointer; 
+}
 .text-class-footer {
     color:#F7FCFE;
 }
