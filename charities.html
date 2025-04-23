@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HelpHub - Charities</title>
+    <link rel="stylesheet" href="HelpHub.css">
+    <script src="charity_profile.js"></script>
+    <script src="https://kit.fontawesome.com/d467870958.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!-- Header -->
+
+    <nav class="navbar">
+        <a class="navbar-brand" href="HelpHub.html">HelpHub</a>
+        <div class="navbar-nav">
+            <div class="nav-item"><a class="nav-link" href="HelpHub.html">Home</a></div>
+            <div class="nav-item"><a class="nav-link" href="charities.html">Charities</a></div>
+            <div class="nav-item" style="margin-right: 25px;"><a class="nav-link" href="charity-news.html">Charity News</a></div>
+        </div>
+    </nav>
+
+    
+<!-- Main Content -->
+<div class="container">
+    <h1 class="charity-title">Find Charities Making a Local Difference</h1>
+    <div class="line"></div>
+
+    <div class="search-section">
+        <input type="text" id="searchInput" class="form-control" placeholder="Search by name...">
+    </div>
+    
+    <div class="filters">
+        <label for="focusFilter">Filter by Focus Area:</label>
+        <select id="focusFilter">
+            <option value="">All</option>
+            <option value="Homeless Support">Homeless Support</option>
+            <option value="Environmental Conservation">Environmental Conservation</option>
+            <option value="Youth Mentorship">Youth Mentorship</option>
+            <option value="Medical Aid">Medical Aid</option>
+        </select>
+    </div>
+
+    <!-- Table of Charities -->
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Focus Area</th>
+                <th>Organization</th>
+                <th>Location</th>
+                <th>Volunteer Hours</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Hope for All</td>
+                <td>Homeless Support</td>
+                <td>Community Outreach Initiative</td>
+                <td>New York, NY</td>
+                <td>Mon-Fri, 9am–5pm</td>
+                <td><a href="hope-for-all.html" class="table-button">Learn More</a></td>
+            </tr>
+            <tr>
+                <td>Green Roots</td>
+                <td>Environmental Conservation</td>
+                <td>Eco Allies</td>
+                <td>Portland, OR</td>
+                <td>Weekends, 10am–2pm</td>
+                <td><a href="green-roots.html" class="table-button">Learn More</a></td>
+            </tr>
+            <tr>
+                <td>Bright Futures</td>
+                <td>Youth Mentorship</td>
+                <td>Inspire Tomorrow</td>
+                <td>Chicago, IL</td>
+                <td>Flexible Hours</td>
+                <td><a href="bright-futures.html" class="table-button">Learn More</a></td>
+            </tr>
+            <tr>
+                <td>Healthy Hearts</td>
+                <td>Medical Aid</td>
+                <td>CareBridge Network</td>
+                <td>Austin, TX</td>
+                <td>Weekdays, 8am–4pm</td>
+                <td><a href="healthy-hearts.html" class="table-button">Learn More</a></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<!-- Footer -->
+<footer class="bg-light py-3 mt-5">
+    <p>&copy; 2025 HelpHub. All Rights Reserved.</p>
+    <div>
+        <a href="#" class="me-3">Facebook</a>
+        <a href="#" class="me-3">Twitter</a>
+        <a href="#">Instagram</a>
+    </div>
+</footer>
+
+</body>
+</html>

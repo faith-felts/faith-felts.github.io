@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HelpHub - Charities</title>
+    <link rel="stylesheet" href="HelpHub.css">
+    <script src="charity_profile.js"></script>
+    <script src="https://kit.fontawesome.com/d467870958.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100..900&display=swap" rel="stylesheet">
+</head>
+
+
+<body>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <a class="navbar-brand" href="HelpHub.html">HelpHub</a>
+    <div class="navbar-nav">
+        <div class="nav-item"><a class="nav-link" href="HelpHub.html">Home</a></div>
+        <div class="nav-item"><a class="nav-link" href="charities.html">Charities</a></div>
+        <div class="nav-item" style="margin-right: 25px;"><a class="nav-link" href="charity-news.html">Charity News</a></div>
+    </div>
+</nav>
+
+  <!-- Main Content -->
+  <div class="charity-container">
+    <h2 class="page-title">Charity Page</h2>
+    <a href="charities.html" class="back-btn">Back to All Charities</a>
+    <hr class="line" />
+
+    <!-- Main Intro Section -->
+    <div class="charity-header">
+      <h1>Healthy Hearts</h1>
+      <p>
+        Healthy Hearts brings free, high-quality healthcare services to low-income and uninsured communities in the Austin area through mobile clinics and public wellness events.
+      </p>
+    </div>
+
+    <!-- Info + Image Section -->
+    <div class="info-flex">
+      <div class="info-image">
+        <img src="https://images.pexels.com/photos/8460371/pexels-photo-8460371.jpeg" alt="Charity Image" />
+      </div>
+      <div class="info-text">
+        <p>
+          With the help of dedicated medical professionals and volunteers, Healthy Hearts offers screenings, vaccinations, and mental health support where it's needed most. Join us to ensure no one is left behind when it comes to healthcare.
+        </p>
+        <button id="volunteerBtn">Volunteer Now!</button>
+      </div>
+    </div>
+  </div>
+
+  <form id="volunteerForm" style="display: none; margin-top: 20px;">
+    <label>Name: <input type="text" name="name" required></label>
+    <label>Email: <input type="email" name="email" required></label>
+    <button type="submit">Submit</button>
+  </form>
+
+  <!-- Footer -->
+  <footer class="bg-light py-3 mt-5">
+    <p>&copy; 2025 HelpHub. All Rights Reserved.</p>
+    <div>
+      <a href="#" class="me-3">Facebook</a>
+      <a href="#" class="me-3">Twitter</a>
+      <a href="#">Instagram</a>
+    </div>
+  </footer>
+</body>
+</html>

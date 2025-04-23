@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Charity News - HelpHub</title>
+    <link rel="stylesheet" href="HelpHub.css">
+    <script defer src="charity-news.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <a class="navbar-brand" href="HelpHub.html">HelpHub</a>
+        <div class="navbar-nav">
+            <div class="nav-item"><a class="nav-link" href="HelpHub.html">Home</a></div>
+            <div class="nav-item"><a class="nav-link" href="charities.html">Charities</a></div>
+            <div class="nav-item" style="margin-right: 25px;"><a class="nav-link" href="charity-news.html">Charity News</a></div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h1 class="page-title">Latest Charity News</h1>
+        <p>Even though our goal is to connect you with local charities, we encourage you to look into what is going on in health, education, homelessness, and the enviroment worldwide. </p>
+        <div id="news-container">
+            <p>Loading news...</p>
+        </div>
+    </div>
+
+    <footer class="bg-light py-3 mt-5">
+        <p>&copy; 2025 HelpHub. All Rights Reserved.</p>
+        <div>
+            <a href="#" class="me-3">Facebook</a>
+            <a href="#" class="me-3">Twitter</a>
+            <a href="#">Instagram</a>
+        </div>
+    </footer>
+</body>
+</html>
+
+<script>
+// get API
+const apiKey = "pub_804246797a8e80fcd80bec39b2a997c374307&q";
+const apiUrl = `https://newsdata.io/api/1/news?apikey=pub_804246797a8e80fcd80bec39b2a997c374307&q=volunteer%20OR%20charity%20OR%20nonprofit&country=us&language=en&category=domestic,education,environment,health,lifestyle`;
+
+const container = document.getElementById("news-container");
+
+fetch(apiUrl)
+    .then(response => response.json())
+    .then(data => {
+        container.innerHTML = ""; // Clear loading message
+
+        if (data.results && data.results.length > 0) {
+            data.results.forEach(article => {
+                const articleDiv = document.createElement("div");
+                articleDiv.classList.add("card"); // Reuse HelpHub's card styling
+                articleDiv.innerHTML = `
+                    <h4>${article.title}</h4>
+                    <p>${article.description || "No description available."}</p>
+                    <a href="${article.link}" target="_blank" class="btn-learn-more">Read More</a>
+                `;
+                container.appendChild(articleDiv);
+            });
+        } else {
+            container.innerHTML = "<p>No articles found.</p>";
+        }
+    })
+    .catch(error => {
+        console.error("Error fetching news:", error);
+        container.innerHTML = "<p>Sorry, we couldn't load the news at the moment. Please try again later.</p>";
+    });
+</script>
